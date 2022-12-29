@@ -79,7 +79,7 @@ async function GetVideo(url, q = "480") {
           .field("v_id", await regex(url))
           .field("_id", id)
           .field("ajax", "1")
-          .field("token", "")
+          // .field("token", "")
           .field("ftype", type)
           .field("fquality", quality)
           .then(async function (body) {
