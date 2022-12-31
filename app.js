@@ -15,6 +15,7 @@ app.use(express.json())
 
 app.post('/getVideoLink',async(req,res)=>{
 	const {url,q}=req.body
+	console.log('post url: ',url)
 	const obj=await GetVideo(url,q)
 
 	console.log('obj video: ',obj)

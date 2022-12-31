@@ -79,6 +79,7 @@ async function GetAudio(url) {
               .find("a")
               .attr("href");
             // console.log('urlDown: ',urlDown)
+            console.log('long url: ',urlDown)
             urlDown = await tiny.shorten(urlDown);
             resolve({
               title,

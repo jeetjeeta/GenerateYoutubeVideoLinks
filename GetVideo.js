@@ -22,6 +22,8 @@ async function GetVideo(url, q = "480") {
     //  }
     //  const dataString=JSON.stringify(data)
 
+    console.log('superagent url: ',url)
+
     superagent
       .post("https://www.y2mate.com/mates/en68/analyze/ajax")
       // .send(formData) // sends a JSON post body
@@ -90,6 +92,7 @@ async function GetVideo(url, q = "480") {
               .find("a")
               .attr("href");
             // console.log('urlDown: ',urlDown)
+            console.log('long url: ',urlDown)
             urlDown = await tiny.shorten(urlDown);
             resolve({
               title,
